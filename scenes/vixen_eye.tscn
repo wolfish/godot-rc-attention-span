@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dsadorp40pbqw"]
+
+[ext_resource type="PackedScene" uid="uid://dtuqdxqty1cuh" path="res://addons/rig_eye_2d/scenes/rig_eye_2d.tscn" id="1_3oct3"]
+[ext_resource type="Texture2D" uid="uid://ckpjygomxh5ai" path="res://sprites/vixen/head/eyes/eyeball.png" id="2_vjtfr"]
+
+[node name="VixenEye" unique_id=1707975233 instance=ExtResource("1_3oct3")]
+texture_filter = 1
+process_in_editor = true
+bounds_iris = Vector2(0, 0)
+bounds_pupil = Vector2(5, 2)
+
+[node name="EyePupilSprite" parent="EyeWhite/EyeIris/EyePupil" parent_id_path=PackedInt32Array(1103731963) index="0"]
+texture = ExtResource("2_vjtfr")

@@ -1,0 +1,465 @@
+[gd_scene format=3 uid="uid://canqxavqdj20m"]
+
+[ext_resource type="Texture2D" uid="uid://cknb0vmtlpcb4" path="res://sprites/cat/body.png" id="1_nht4h"]
+[ext_resource type="Texture2D" uid="uid://c5uaxlp7lkt83" path="res://sprites/cat/head_back.png" id="2_2bxyq"]
+[ext_resource type="Script" uid="uid://da05v64g531g0" path="res://scripts/cat_rig.gd" id="2_fue58"]
+[ext_resource type="Texture2D" uid="uid://dddp2k14gv0y1" path="res://sprites/cat/left_ear.png" id="3_jw5sf"]
+[ext_resource type="Texture2D" uid="uid://n3v33y2lda3k" path="res://sprites/cat/right_ear.png" id="4_ldu8e"]
+[ext_resource type="Texture2D" uid="uid://c8l23clrx7wge" path="res://sprites/cat/tail.png" id="5_tmqt2"]
+[ext_resource type="Texture2D" uid="uid://c4qkan0hd71ex" path="res://sprites/cat/tail_end.png" id="6_ovlqc"]
+[ext_resource type="Texture2D" uid="uid://dqse6s54g0yrv" path="res://sprites/cat/eye_front.png" id="7_tmqt2"]
+[ext_resource type="PackedScene" uid="uid://c1tkipx1ijs1y" path="res://scenes/cat_eye.tscn" id="8_ovlqc"]
+[ext_resource type="Texture2D" uid="uid://bu0c8n8ayyuc5" path="res://sprites/cat/head_middle.png" id="9_yo6nx"]
+[ext_resource type="Texture2D" uid="uid://b2bm8yd11cxpm" path="res://sprites/cat/eye_middle.png" id="10_nwm7x"]
+[ext_resource type="Shader" uid="uid://ddfsjm0k0oaa4" path="res://shaders/glitch.gdshader" id="12_yo6nx"]
+[ext_resource type="AudioStream" uid="uid://d3tfcspcdqj76" path="res://sound/effects/pink_noise.mp3" id="13_nwm7x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lgmcr"]
+shader = ExtResource("12_yo6nx")
+shader_parameter/shake_power = 0.1
+shader_parameter/shake_rate = 1.0
+shader_parameter/shake_speed = 1.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.0
+
+[sub_resource type="Animation" id="Animation_nwm7x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shader:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeadMiddle:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeadBack:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeftEar:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RightEar:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HeadMiddle/EyeMiddle/CatEyeSingle:target_path")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("../../../Marker2D")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HeadBack/EyeFront/CatEyeRight:target_path")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("")]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HeadBack/EyeFront:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Tail:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17.5, -5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TailEnd:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(14, -17)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TailEnd:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PinkNoise:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("HeadBack/EyeFront/CatEyeLeft:target_path")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("")]
+}
+
+[sub_resource type="Animation" id="Animation_yo6nx"]
+resource_name = "cat_appear"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shader:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeadMiddle:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeadBack:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeftEar:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RightEar:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HeadMiddle/EyeMiddle/CatEyeSingle:target_path")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [NodePath("../../../Marker2D"), NodePath("")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HeadBack/EyeFront/CatEyeRight:target_path")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [NodePath(""), NodePath("../../../DognaMarker")]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HeadBack/EyeFront:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Tail:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(17.5, -5), Vector2(17.5, -5), Vector2(17.5, -3), Vector2(17.5, -4), Vector2(17.5, -5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TailEnd:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(14, -17), Vector2(14, -17), Vector2(14, -16), Vector2(14, -18)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TailEnd:rotation")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2.5, 3.5, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.06981317007977318, 0.0, 0.06981317007977318, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PinkNoise:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.5, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("HeadBack/EyeFront/CatEyeLeft:target_path")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [NodePath(""), NodePath(""), NodePath("../../../DognaMarker")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nwm7x"]
+_data = {
+&"RESET": SubResource("Animation_nwm7x"),
+&"cat_appear": SubResource("Animation_yo6nx")
+}
+
+[node name="CatRig" type="Node2D" unique_id=2040195689]
+visible = false
+texture_filter = 1
+script = ExtResource("2_fue58")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=82450694]
+texture = ExtResource("1_nht4h")
+
+[node name="LeftEar" type="Sprite2D" parent="." unique_id=992547277]
+position = Vector2(-22, -18)
+texture = ExtResource("3_jw5sf")
+
+[node name="RightEar" type="Sprite2D" parent="." unique_id=1353550992]
+position = Vector2(-16, -19)
+texture = ExtResource("4_ldu8e")
+
+[node name="Tail" type="Sprite2D" parent="." unique_id=108592760]
+position = Vector2(17.5, -5)
+texture = ExtResource("5_tmqt2")
+
+[node name="TailEnd" type="Sprite2D" parent="." unique_id=468132634]
+position = Vector2(14, -17)
+texture = ExtResource("6_ovlqc")
+
+[node name="HeadBack" type="Sprite2D" parent="." unique_id=1132637845]
+position = Vector2(-19, -10)
+texture = ExtResource("2_2bxyq")
+
+[node name="EyeFront" type="Sprite2D" parent="HeadBack" unique_id=1304820755]
+visible = false
+position = Vector2(0.5, -2)
+texture = ExtResource("7_tmqt2")
+
+[node name="CatEyeRight" parent="HeadBack/EyeFront" unique_id=1707975233 instance=ExtResource("8_ovlqc")]
+position = Vector2(2, 0)
+process_in_editor = true
+bounds_iris = Vector2(0.5, 0.5)
+bounds_pupil = Vector2(1, 0.3)
+
+[node name="CatEyeLeft" parent="HeadBack/EyeFront" unique_id=2019709957 instance=ExtResource("8_ovlqc")]
+position = Vector2(-5.5, 0)
+process_in_editor = true
+bounds_iris = Vector2(0.5, 0.5)
+bounds_pupil = Vector2(1, 0.3)
+
+[node name="EyeIris" parent="HeadBack/EyeFront/CatEyeLeft/EyeWhite" parent_id_path=PackedInt32Array(2019709957, 27271281) index="1" unique_id=1064377273]
+position = Vector2(1e-45, 1e-45)
+
+[node name="EyeIrisSprite" parent="HeadBack/EyeFront/CatEyeLeft/EyeWhite/EyeIris" index="0"]
+texture = null
+
+[node name="EyePupil" parent="HeadBack/EyeFront/CatEyeLeft/EyeWhite/EyeIris" index="1" unique_id=1103731963]
+position = Vector2(1e-45, 1e-45)
+
+[node name="HeadMiddle" type="Sprite2D" parent="." unique_id=2100917838]
+visible = false
+position = Vector2(-19, -13)
+texture = ExtResource("9_yo6nx")
+
+[node name="EyeMiddle" type="Sprite2D" parent="HeadMiddle" unique_id=2105677188]
+position = Vector2(-1, 2)
+texture = ExtResource("10_nwm7x")
+
+[node name="CatEyeSingle" parent="HeadMiddle/EyeMiddle" unique_id=1162986460 instance=ExtResource("8_ovlqc")]
+process_in_editor = true
+target_path = NodePath("../../../Marker2D")
+bounds_iris = Vector2(0.5, 0.5)
+bounds_pupil = Vector2(1, 0.3)
+
+[node name="Shader" type="ColorRect" parent="." unique_id=1135476571]
+material = SubResource("ShaderMaterial_lgmcr")
+offset_left = -29.0
+offset_top = -23.0
+offset_right = 26.0
+offset_bottom = 21.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2071239041]
+libraries/ = SubResource("AnimationLibrary_nwm7x")
+
+[node name="FrontMarker" type="Marker2D" parent="." unique_id=983484513]
+position = Vector2(-44, -12)
+
+[node name="DognaMarker" type="Marker2D" parent="." unique_id=812436531]
+position = Vector2(17, 33)
+
+[node name="PinkNoise" type="AudioStreamPlayer2D" parent="." unique_id=866248072]
+stream = ExtResource("13_nwm7x")
+max_distance = 500.0
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_finished"]
+
+[editable path="HeadBack/EyeFront/CatEyeLeft"]

@@ -1,0 +1,357 @@
+[gd_scene format=3 uid="uid://4lucxrowiuly"]
+
+[ext_resource type="Texture2D" uid="uid://cmkiftqwehojt" path="res://sprites/vixen/head/hair.png" id="1_5s3kf"]
+[ext_resource type="Script" uid="uid://brexkqnneaumt" path="res://scripts/vixen_rig.gd" id="1_vxlkg"]
+[ext_resource type="Texture2D" uid="uid://clxrknly4j3kk" path="res://sprites/vixen/body/body.png" id="1_wq522"]
+[ext_resource type="Texture2D" uid="uid://fblcuabo4lfa" path="res://sprites/vixen/body/bust.png" id="2_wfa8f"]
+[ext_resource type="Texture2D" uid="uid://c44mwjbem3ulm" path="res://sprites/vixen/body/id.png" id="3_bauc4"]
+[ext_resource type="Texture2D" uid="uid://badtjbxj61dgg" path="res://sprites/vixen/body/jacket.png" id="4_3v7a4"]
+[ext_resource type="Texture2D" uid="uid://b0ff7i2rbwnbp" path="res://sprites/vixen/head/face.png" id="5_nq3dy"]
+[ext_resource type="Texture2D" uid="uid://b5c7d64val4hy" path="res://sprites/vixen/body/clipboard.png" id="6_duqeo"]
+[ext_resource type="Texture2D" uid="uid://bfsb2fbf0bjt" path="res://sprites/vixen/body/right_hand.png" id="7_e2d1c"]
+[ext_resource type="Texture2D" uid="uid://dk8e1gohe610v" path="res://sprites/vixen/body/left_hand.png" id="8_5s3kf"]
+[ext_resource type="Texture2D" uid="uid://epf681fu0f1s" path="res://sprites/vixen/head/left_ear.png" id="10_36mj7"]
+[ext_resource type="Texture2D" uid="uid://cfh6x0ok8nq20" path="res://sprites/vixen/head/right_ear.png" id="11_ygtb6"]
+[ext_resource type="Texture2D" uid="uid://djxys63brbq6h" path="res://sprites/vixen/head/bang.png" id="12_n1gdk"]
+[ext_resource type="Texture2D" uid="uid://b60b23qavxrqb" path="res://sprites/vixen/head/eyes/eye_open_left.png" id="13_vxlkg"]
+[ext_resource type="PackedScene" uid="uid://dsadorp40pbqw" path="res://scenes/vixen_eye.tscn" id="14_n1gdk"]
+[ext_resource type="Texture2D" uid="uid://ca4wttwhaf8e1" path="res://sprites/vixen/head/eyes/eye_open_right.png" id="14_yrpp6"]
+[ext_resource type="Texture2D" uid="uid://xim6va8mwjq" path="res://sprites/vixen/body/mouth.png" id="15_l7e5d"]
+[ext_resource type="Texture2D" uid="uid://bru45j4056r1q" path="res://sprites/vixen/body/mouth_angry.png" id="16_ygtb6"]
+[ext_resource type="Texture2D" uid="uid://b0w8r0jxj6mwq" path="res://sprites/vixen/head/glasses.png" id="17_n1gdk"]
+[ext_resource type="Texture2D" uid="uid://bq4gqaq7uuit0" path="res://sprites/vixen/head/eyes/eye_narrow_left.png" id="17_oavyp"]
+[ext_resource type="Texture2D" uid="uid://5e4o5uxrqxo4" path="res://sprites/vixen/head/eyes/eye_narrow_right.png" id="18_ltfs7"]
+[ext_resource type="Texture2D" uid="uid://d3t2wbut5yiex" path="res://sprites/vixen/head/eyes/eye_slim_left.png" id="19_5el84"]
+[ext_resource type="Texture2D" uid="uid://cgxce2ktmpkio" path="res://sprites/vixen/head/eyes/eye_slim_right.png" id="20_81sf1"]
+[ext_resource type="AudioStream" uid="uid://bsf8jrtbvjmaw" path="res://sound/effects/footstep1.ogg" id="20_l16th"]
+[ext_resource type="AudioStream" uid="uid://dhl1r4jncoq2j" path="res://sound/effects/footstep2.ogg" id="21_m123r"]
+[ext_resource type="Texture2D" uid="uid://bnoe1hnspiia0" path="res://sprites/vixen/head/eyes/eye_closed_left.png" id="21_ry54o"]
+[ext_resource type="Texture2D" uid="uid://bvvjrwoow0rjl" path="res://sprites/vixen/head/eyes/eye_angry_right.png" id="22_ben5p"]
+[ext_resource type="Texture2D" uid="uid://daibwr05ifif8" path="res://sprites/vixen/head/eyes/eye_angry_left.png" id="23_fdqui"]
+
+[sub_resource type="Animation" id="Animation_oavyp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpenEyes:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NarrowEyes:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SlimEyes:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ClosedEyes:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ltfs7"]
+resource_name = "blink"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpenEyes:visible")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NarrowEyes:visible")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SlimEyes:visible")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ClosedEyes:visible")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5el84"]
+_data = {
+&"RESET": SubResource("Animation_oavyp"),
+&"blink": SubResource("Animation_ltfs7")
+}
+
+[node name="VixenRig" type="Node2D" unique_id=957386412]
+texture_filter = 1
+script = ExtResource("1_vxlkg")
+
+[node name="Hair" type="Sprite2D" parent="." unique_id=981822367]
+position = Vector2(5, -39)
+texture = ExtResource("1_5s3kf")
+offset = Vector2(0.5, 0)
+
+[node name="Body" type="Sprite2D" parent="." unique_id=603417887]
+texture = ExtResource("1_wq522")
+
+[node name="Bust" type="Sprite2D" parent="." unique_id=28877355]
+position = Vector2(4, -23)
+texture = ExtResource("2_wfa8f")
+
+[node name="Id" type="Sprite2D" parent="." unique_id=823542051]
+position = Vector2(4, -23)
+texture = ExtResource("3_bauc4")
+offset = Vector2(-0.5, 0.5)
+flip_h = true
+
+[node name="Jacket" type="Sprite2D" parent="." unique_id=623491094]
+position = Vector2(4, -15)
+texture = ExtResource("4_3v7a4")
+
+[node name="Face" type="Sprite2D" parent="." unique_id=1303826903]
+position = Vector2(3, -55)
+texture = ExtResource("5_nq3dy")
+offset = Vector2(-0.5, 0)
+
+[node name="Clipboard" type="Sprite2D" parent="." unique_id=1437700601]
+position = Vector2(-1, -21)
+texture = ExtResource("6_duqeo")
+
+[node name="RightHand" type="Sprite2D" parent="." unique_id=2134168715]
+position = Vector2(-3, -26)
+texture = ExtResource("7_e2d1c")
+offset = Vector2(0, 0.5)
+
+[node name="LeftHand" type="Sprite2D" parent="." unique_id=190473537]
+position = Vector2(4, -25)
+texture = ExtResource("8_5s3kf")
+offset = Vector2(0.5, 0)
+
+[node name="LeftEar" type="Sprite2D" parent="." unique_id=715387062]
+position = Vector2(-8, -79)
+texture = ExtResource("10_36mj7")
+
+[node name="RightEar" type="Sprite2D" parent="." unique_id=1646517586]
+position = Vector2(15, -79)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("11_ygtb6")
+
+[node name="Bang" type="Sprite2D" parent="." unique_id=606004867]
+position = Vector2(4, -73)
+texture = ExtResource("12_n1gdk")
+
+[node name="OpenEyes" type="Node2D" parent="." unique_id=1645658048]
+
+[node name="EyeOpenLeft" type="Sprite2D" parent="OpenEyes" unique_id=602623539]
+position = Vector2(-8, -56)
+texture = ExtResource("13_vxlkg")
+offset = Vector2(0.5, -0.5)
+
+[node name="Polygon2D" type="Polygon2D" parent="OpenEyes/EyeOpenLeft" unique_id=2115787492]
+clip_children = 2
+position = Vector2(-8, -4)
+texture = ExtResource("13_vxlkg")
+polygon = PackedVector2Array(2.992125, 0.944125, 16.023312, 0.9665625, 16.019062, 3.0324376, 14.019062, 3.024625, 14.026875, 4.024625, 12.026875, 4.024625, 12.020187, 5.0237503, 10.012375, 5.0237503, 10.01925, 6.0263124, 7.003625, 6.0263124, 6.9958124, 5.0185, 4.9903126, 5.0195627, 4.9903126, 4.01175, 3.9825, 4.0039377, 3.98225, 3.021375, 2.997875, 3.0135624)
+uv = PackedVector2Array(2.992125, 0.944125, 16.023312, 0.9665625, 16.019062, 3.0324376, 14.019062, 3.024625, 14.026875, 4.024625, 12.026875, 4.024625, 12.020187, 5.0237503, 10.012375, 5.0237503, 10.01925, 6.0263124, 7.003625, 6.0263124, 6.9958124, 5.0185, 4.9903126, 5.0195627, 4.9903126, 4.01175, 3.9825, 4.0039377, 3.98225, 3.021375, 2.997875, 3.0135624)
+
+[node name="VixenEye" parent="OpenEyes/EyeOpenLeft/Polygon2D" unique_id=1707975233 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("14_n1gdk")]
+position = Vector2(9, 2)
+paired_eyes = [NodePath("../../../EyeOpenRight/Polygon2D/VixenEye")]
+
+[node name="EyeOpenRight" type="Sprite2D" parent="OpenEyes" unique_id=970864887]
+position = Vector2(14, -56)
+texture = ExtResource("14_yrpp6")
+offset = Vector2(0.5, -0.5)
+
+[node name="Polygon2D" type="Polygon2D" parent="OpenEyes/EyeOpenRight" unique_id=1474342139]
+clip_children = 2
+position = Vector2(-7, -4)
+texture = ExtResource("14_yrpp6")
+polygon = PackedVector2Array(0.9796467, 0.95159084, 12.034849, 0.97483623, 12.034849, 2.0406256, 11.025751, 2.017949, 11.026701, 4.045964, 10.017603, 4.0232873, 10.017603, 5.055062, 8.033421, 5.0323853, 8.03674, 6.0077705, 4.964093, 6.019109, 4.9754314, 5.0440254, 3.0040717, 5.019375, 2.9700575, 4.0102763, 1.0085516, 4.0216146)
+uv = PackedVector2Array(0.9796467, 0.95159084, 12.034849, 0.97483623, 12.034849, 2.0406256, 11.025751, 2.017949, 11.026701, 4.045964, 10.017603, 4.0232873, 10.017603, 5.055062, 8.033421, 5.0323853, 8.03674, 6.0077705, 4.964093, 6.019109, 4.9754314, 5.0440254, 3.0040717, 5.019375, 2.9700575, 4.0102763, 1.0085516, 4.0216146)
+
+[node name="VixenEye" parent="OpenEyes/EyeOpenRight/Polygon2D" unique_id=90602357 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("14_n1gdk")]
+position = Vector2(6, 2)
+paired_eyes = [NodePath("../../../EyeOpenLeft/Polygon2D/VixenEye")]
+
+[node name="NarrowEyes" type="Node2D" parent="." unique_id=1469670441]
+visible = false
+
+[node name="EyeNarrowLeft" type="Sprite2D" parent="NarrowEyes" unique_id=2101662315]
+position = Vector2(-8, -56)
+texture = ExtResource("17_oavyp")
+offset = Vector2(0.5, -0.5)
+
+[node name="Polygon2D" type="Polygon2D" parent="NarrowEyes/EyeNarrowLeft" unique_id=315827867]
+clip_children = 2
+position = Vector2(-8, -4)
+texture = ExtResource("17_oavyp")
+polygon = PackedVector2Array(2.9956038, 0.97713083, 16.019241, 0.96203977, 16.034332, 3.0747964, 14.027213, 3.0446143, 14.012122, 4.0557194, 3.991618, 4.0406284, 3.991618, 3.0295231, 2.9805129, 3.0295231)
+uv = PackedVector2Array(2.9956038, 0.97713083, 16.019241, 0.96203977, 16.034332, 3.0747964, 14.027213, 3.0446143, 14.012122, 4.0557194, 3.991618, 4.0406284, 3.991618, 3.0295231, 2.9805129, 3.0295231)
+
+[node name="VixenEye" parent="NarrowEyes/EyeNarrowLeft/Polygon2D" unique_id=217193176 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("14_n1gdk")]
+position = Vector2(9, 2)
+paired_eyes = [NodePath("../../../EyeNarrowRight/Polygon2D/VixenEye")]
+
+[node name="EyeNarrowRight" type="Sprite2D" parent="NarrowEyes" unique_id=1785761114]
+position = Vector2(14, -58)
+texture = ExtResource("18_ltfs7")
+offset = Vector2(0.5, 0.5)
+
+[node name="Polygon2D" type="Polygon2D" parent="NarrowEyes/EyeNarrowRight" unique_id=68677217]
+clip_children = 2
+position = Vector2(-7, -2)
+texture = ExtResource("18_ltfs7")
+polygon = PackedVector2Array(0.98444486, 0.9786817, 13.027158, 0.9786817, 13.027158, 2.03506, 12.031144, 2.03506, 12.031144, 3.031074, 11.050221, 3.0159829, 11.065312, 4.042179, 0.9995358, 4.042179)
+uv = PackedVector2Array(0.98444486, 0.9786817, 13.027158, 0.9786817, 13.027158, 2.03506, 12.031144, 2.03506, 12.031144, 3.031074, 11.050221, 3.0159829, 11.065312, 4.042179, 0.9995358, 4.042179)
+
+[node name="VixenEye" parent="NarrowEyes/EyeNarrowRight/Polygon2D" unique_id=403567138 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("14_n1gdk")]
+position = Vector2(7, 2)
+paired_eyes = [NodePath("../../../EyeNarrowLeft/Polygon2D/VixenEye")]
+
+[node name="SlimEyes" type="Node2D" parent="." unique_id=1175314646]
+visible = false
+
+[node name="EyeSlimLeft" type="Sprite2D" parent="SlimEyes" unique_id=1943966341]
+position = Vector2(-8, -58)
+texture = ExtResource("19_5el84")
+
+[node name="Polygon2D" type="Polygon2D" parent="SlimEyes/EyeSlimLeft" unique_id=605906207]
+clip_children = 2
+position = Vector2(-9, -2)
+texture = ExtResource("19_5el84")
+polygon = PackedVector2Array(2.9877605, 0.9868431, 17.040125, 0.9868431, 17.06222, 3.0858598, 4.0041265, 3.0416698, 3.979041, 2.8970237, 3.979041, 2.0415063, 2.9895267, 2.0208912)
+uv = PackedVector2Array(2.9877605, 0.9868431, 17.040125, 0.9868431, 17.06222, 3.0858598, 4.0041265, 3.0416698, 3.979041, 2.8970237, 3.979041, 2.0415063, 2.9895267, 2.0208912)
+
+[node name="VixenEye" parent="SlimEyes/EyeSlimLeft/Polygon2D" unique_id=2101476550 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("14_n1gdk")]
+position = Vector2(10, 2)
+paired_eyes = [NodePath("../../../EyeSlimRight/Polygon2D/VixenEye")]
+bounds_pupil = Vector2(5, 1)
+
+[node name="EyeSlimRight" type="Sprite2D" parent="SlimEyes" unique_id=22822410]
+position = Vector2(15, -58)
+texture = ExtResource("20_81sf1")
+
+[node name="Polygon2D" type="Polygon2D" parent="SlimEyes/EyeSlimRight" unique_id=1606234634]
+clip_children = 2
+position = Vector2(-8, -2)
+texture = ExtResource("20_81sf1")
+polygon = PackedVector2Array(0.96814823, 0.986215, 14.006875, 0.9711238, 14.032625, 1.0374374, 14.032625, 2.0218124, 13.017, 2.014, 13.016188, 3.0466876, 0.979, 3.020625)
+uv = PackedVector2Array(0.96814823, 0.986215, 14.006875, 0.9711238, 14.032625, 1.0374374, 14.032625, 2.0218124, 13.017, 2.014, 13.016188, 3.0466876, 0.979, 3.020625)
+
+[node name="VixenEye" parent="SlimEyes/EyeSlimRight/Polygon2D" unique_id=801769309 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("14_n1gdk")]
+position = Vector2(7, 2)
+paired_eyes = [NodePath("../../../EyeSlimLeft/Polygon2D/VixenEye")]
+bounds_pupil = Vector2(5, 1)
+
+[node name="ClosedEyes" type="Node2D" parent="." unique_id=126151613]
+visible = false
+
+[node name="EyeClosedLeft" type="Sprite2D" parent="ClosedEyes" unique_id=247235415]
+position = Vector2(-9, -58)
+texture = ExtResource("21_ry54o")
+offset = Vector2(0.5, 0)
+
+[node name="EyeClosedRight" type="Sprite2D" parent="ClosedEyes" unique_id=1284038268]
+position = Vector2(16, -58)
+texture = ExtResource("21_ry54o")
+offset = Vector2(0.5, 0)
+flip_h = true
+
+[node name="AngryEyes" type="Node2D" parent="." unique_id=1853087129]
+visible = false
+
+[node name="EyeAngryRight" type="Sprite2D" parent="AngryEyes" unique_id=1142809675]
+position = Vector2(14, -57)
+texture = ExtResource("22_ben5p")
+offset = Vector2(0.5, -0.5)
+
+[node name="EyeAngryLeft" type="Sprite2D" parent="AngryEyes" unique_id=818738960]
+position = Vector2(-8, -57)
+texture = ExtResource("23_fdqui")
+offset = Vector2(0.5, -0.5)
+
+[node name="Mouth" type="Sprite2D" parent="." unique_id=417637589]
+position = Vector2(4, -45)
+texture = ExtResource("15_l7e5d")
+
+[node name="MouthAngry" type="Sprite2D" parent="." unique_id=1083507524]
+visible = false
+position = Vector2(4, -45)
+texture = ExtResource("16_ygtb6")
+
+[node name="Glasses" type="Sprite2D" parent="." unique_id=890336532]
+position = Vector2(3, -56)
+texture = ExtResource("17_n1gdk")
+
+[node name="Footstep1" type="AudioStreamPlayer2D" parent="." unique_id=1243955378]
+stream = ExtResource("20_l16th")
+
+[node name="Footstep2" type="AudioStreamPlayer2D" parent="." unique_id=1531035152]
+stream = ExtResource("21_m123r")
+
+[node name="FootstepTimer" type="Timer" parent="." unique_id=318428679]
+wait_time = 0.4
+
+[node name="BlinkAnimation" type="AnimationPlayer" parent="." unique_id=402057625]
+libraries/ = SubResource("AnimationLibrary_5el84")
+speed_scale = 2.0
+
+[connection signal="timeout" from="FootstepTimer" to="." method="_on_footstep_timer_timeout"]
+[connection signal="animation_finished" from="BlinkAnimation" to="." method="_on_blink_animation_finished"]

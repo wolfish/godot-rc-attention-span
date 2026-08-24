@@ -1,0 +1,1413 @@
+[gd_scene format=3 uid="uid://ctvqrwn77a0y7"]
+
+[ext_resource type="Script" uid="uid://dtgx7tyjdugic" path="res://scripts/main_scene.gd" id="1_mngbo"]
+[ext_resource type="Texture2D" uid="uid://5m6l2bik1m2s" path="res://sprites/room.png" id="1_w2twt"]
+[ext_resource type="Texture2D" uid="uid://bwejhdvf85igt" path="res://sprites/chair.png" id="2_6wevv"]
+[ext_resource type="PackedScene" uid="uid://4lucxrowiuly" path="res://scenes/vixen_rig.tscn" id="3_6p3nn"]
+[ext_resource type="Texture2D" uid="uid://bl8gr8tdyhihf" path="res://sprites/desk.png" id="3_e1cbu"]
+[ext_resource type="Texture2D" uid="uid://bsg1esvgr4njf" path="res://sprites/manual.png" id="4_mngbo"]
+[ext_resource type="Texture2D" uid="uid://crbnobub51sf5" path="res://sprites/phone_idle.png" id="5_4w45t"]
+[ext_resource type="Shader" uid="uid://ddfsjm0k0oaa4" path="res://shaders/glitch.gdshader" id="5_6wevv"]
+[ext_resource type="Texture2D" uid="uid://c1vh66a70152j" path="res://sprites/flare/quadangle.png" id="6_r6p65"]
+[ext_resource type="AudioStream" uid="uid://cuwyohq55pedd" path="res://sound/effects/chair_rolling.wav" id="7_l40q6"]
+[ext_resource type="Texture2D" uid="uid://bpjv6sf46lja3" path="res://sprites/flare/aura.png" id="7_si52b"]
+[ext_resource type="Texture2D" uid="uid://ckbop4ac3h4y5" path="res://sprites/flare/triangle.png" id="10_bcnxi"]
+[ext_resource type="PackedScene" uid="uid://wb3x5e5mmtiw" path="res://scenes/dogna_rig.tscn" id="11_e1cbu"]
+[ext_resource type="PackedScene" uid="uid://canqxavqdj20m" path="res://scenes/cat_rig.tscn" id="13_4w45t"]
+[ext_resource type="AudioStream" uid="uid://bujck7v5b1e5f" path="res://sound/effects/short_squish.wav" id="14_r6p65"]
+[ext_resource type="AudioStream" uid="uid://e7myvuomd8c2" path="res://sound/effects/neon_flickering.wav" id="15_01n6w"]
+[ext_resource type="AudioStream" uid="uid://d3tfcspcdqj76" path="res://sound/effects/pink_noise.mp3" id="16_6u1mn"]
+[ext_resource type="AudioStream" uid="uid://b8a1g2sh3e377" path="res://sound/effects/door_open.ogg" id="17_58gk3"]
+[ext_resource type="AudioStream" uid="uid://bvxrp0at6jn1" path="res://sound/effects/notification_bell.wav" id="17_bcnxi"]
+[ext_resource type="AudioStream" uid="uid://b83vnovtijjtv" path="res://sound/effects/door_close.ogg" id="18_to7gp"]
+[ext_resource type="AudioStream" uid="uid://c7738j2h0phfn" path="res://sound/effects/put_down.ogg" id="19_u0fll"]
+[ext_resource type="AudioStream" uid="uid://r7uvqbrfwk1c" path="res://sound/effects/vibrate.ogg" id="19_xdqt8"]
+[ext_resource type="AudioStream" uid="uid://bu8kmnd7xdo5w" path="res://sound/music/cottagecore.ogg" id="24_to7gp"]
+[ext_resource type="Texture2D" uid="uid://jovu1vufhs4l" path="res://sprites/mug.png" id="27_4bgka"]
+[ext_resource type="Texture2D" uid="uid://tbeey3ps1rti" path="res://sprites/smoke.png" id="28_02d50"]
+[ext_resource type="AudioStream" uid="uid://b336x3w6dop38" path="res://sound/music/creator_ambient.ogg" id="28_pgk25"]
+[ext_resource type="Gradient" uid="uid://bi2y5fedu067b" path="res://themes/new_gradient.tres" id="29_pgk25"]
+[ext_resource type="PackedScene" uid="uid://bv3qli2b56yu8" path="res://scenes/clipboard.tscn" id="30_02d50"]
+[ext_resource type="Texture2D" uid="uid://bkxbwb0ftnrej" path="res://sprites/bed.png" id="30_pgk25"]
+[ext_resource type="Texture2D" uid="uid://du0vhew76dlha" path="res://sprites/drawer.png" id="31_kkokr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1cbu"]
+shader = ExtResource("5_6wevv")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.2
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3cpch"]
+shader = ExtResource("5_6wevv")
+shader_parameter/shake_power = 0.04
+shader_parameter/shake_rate = 1.0
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.0
+
+[sub_resource type="Animation" id="Animation_7nt27"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DognaRig/Face:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DognaRig/Bang:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.49999845, -18)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DognaRig/HairBasic:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 13)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DognaRig/Glasses:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DognaRig/Bust:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 52)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DognaRig/Id:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 50)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DognaRig/Eyes/OpenNormal:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DognaRig/Mouth:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 9)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DognaRig/Eyes/OpenNormal/RightEyeOpen/RightEyeFullOpen/DognaEyeRight:target_path")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("../../../../../../Manual/ReadingMarker1")]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DognaRig/Eyes/Bored/RightEyeBored/RightEye/DognaEyeRight:target_path")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("../../../../../../Manual/ReadingMarker1")]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DognaRig/Eyes/Narrow/RightEyeNarrow/RightEye/DognaEyeRight:target_path")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("../../../../../../Manual/ReadingMarker1")]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("DognaRig/Eyes/Bored:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("DognaRig/Eyes/Narrow:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 2)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("DognaRig/Eyes/Bored/LeftEyeOpen/LeftEye/DognaEyeLeft:target_path")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("../../../../../../Manual/ReadingMarker1")]
+}
+
+[sub_resource type="Animation" id="Animation_k6f3i"]
+resource_name = "dogna_read"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DognaRig/Face:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DognaRig/Bang:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.49999845, -18), Vector2(0.49999845, -16), Vector2(0.49999845, -18)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DognaRig/HairBasic:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(3, 13), Vector2(3, 15), Vector2(3, 13)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DognaRig/Glasses:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DognaRig/Bust:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 52), Vector2(0, 54), Vector2(0, 52)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DognaRig/Id:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 50), Vector2(1, 53), Vector2(1, 50)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DognaRig/Eyes/OpenNormal:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DognaRig/Mouth:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 9), Vector2(-1, 11), Vector2(-1, 9)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DognaRig/Eyes/OpenNormal/RightEyeOpen/RightEyeFullOpen/DognaEyeRight:target_path")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [NodePath("../../../../../../Manual/ReadingMarker1"), NodePath("../../../../../../Manual/ReadingMarker2"), NodePath("../../../../../../Manual/ReadingMarker3"), NodePath("../../../../../../Manual/ReadingMarker4"), NodePath("../../../../../../Manual/ReadingMarker5")]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DognaRig/Eyes/Bored/RightEyeBored/RightEye/DognaEyeRight:target_path")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [NodePath("../../../../../../Manual/ReadingMarker1"), NodePath("../../../../../../Manual/ReadingMarker2"), NodePath("../../../../../../Manual/ReadingMarker3"), NodePath("../../../../../../Manual/ReadingMarker4"), NodePath("../../../../../../Manual/ReadingMarker5")]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DognaRig/Eyes/Narrow/RightEyeNarrow/RightEye/DognaEyeRight:target_path")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [NodePath("../../../../../../Manual/ReadingMarker1"), NodePath("../../../../../../Manual/ReadingMarker2"), NodePath("../../../../../../Manual/ReadingMarker3"), NodePath("../../../../../../Manual/ReadingMarker4"), NodePath("../../../../../../Manual/ReadingMarker5")]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("DognaRig/Eyes/Bored:position")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1), Vector2(0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("DognaRig/Eyes/Narrow:position")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 2), Vector2(0, 2.5), Vector2(0, 2)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("DognaRig/Eyes/Bored/LeftEyeOpen/LeftEye/DognaEyeLeft:target_path")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [NodePath("../../../../../../Manual/ReadingMarker1"), NodePath("../../../../../../Manual/ReadingMarker2"), NodePath("../../../../../../Manual/ReadingMarker3"), NodePath("../../../../../../Manual/ReadingMarker4"), NodePath("../../../../../../Manual/ReadingMarker5")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xdqt8"]
+_data = {
+&"RESET": SubResource("Animation_7nt27"),
+&"dogna_read": SubResource("Animation_k6f3i")
+}
+
+[sub_resource type="Animation" id="Animation_bcnxi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainLight:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DognaRig/Eyes/Bored/RightEyeBored:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DognaRig/Eyes/Bored:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DognaRig/Eyes/OpenNormal/LeftEyeOpen:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_xdqt8"]
+resource_name = "flicker"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainLight:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95, 2, 2.05, 2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.55, 2.6, 2.65, 2.7, 2.75, 2.8, 2.85, 2.9, 2.95, 3, 3.05, 3.1, 3.15, 3.2, 3.25, 3.3, 3.35, 3.4, 3.45, 3.5, 3.55, 3.6, 3.65, 3.7, 3.75, 3.8, 3.85, 3.9, 3.95, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.7, 0.2, 0.5, 0.1, 0.4, 0.3, 0.5, 0.1, 0.5, 0.0, 0.7, 0.2, 0.5, 0.1, 0.4, 0.3, 0.5, 0.1, 0.5, 0.0, 0.7, 0.2, 0.5, 0.1, 0.4, 0.3, 0.5, 0.1, 0.5, 0.0, 0.7, 0.2, 0.5, 0.1, 0.4, 0.3, 0.5, 0.1, 0.5, 0.0, 0.7, 0.2, 0.5, 0.1, 0.4, 0.3, 0.5, 0.1, 0.5, 0.0, 0.7, 0.2, 0.5, 0.1, 0.4, 0.3, 0.5, 0.1, 0.5, 0.0, 0.7, 0.2, 0.5, 0.1, 0.4, 0.3, 0.5, 0.1, 0.5, 0.0, 0.7, 0.2, 0.5, 0.1, 0.4, 0.3, 0.5, 0.1, 0.5, 0.0, 0.7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DognaRig/Eyes/OpenNormal:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DognaRig/Eyes/OpenNormal/RightEyeOpen:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DognaRig/Eyes/OpenNormal/LeftEyeOpen:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DognaRig/Eyes/Narrow/LeftEyeOpen:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DognaRig/Eyes/Narrow:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DognaRig/Eyes/Bored:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DognaRig/Eyes/Bored/RightEyeBored:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DognaRig/Eyes/Bored/LeftEyeOpen:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_phone_glitch"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_adb74"]
+_data = {
+&"RESET": SubResource("Animation_bcnxi"),
+&"flicker": SubResource("Animation_xdqt8")
+}
+
+[sub_resource type="Animation" id="Animation_adb74"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DognaRig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(158, 53)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Chair:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(159, 97)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DognaRig/HairBasic:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 13)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DognaRig/HairBasic:skew")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DognaRig/Bang:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.49999845, -18)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DognaRig/Bang:skew")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DognaRig/Bust:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 52)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DognaRig:skew")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DognaRig/LeftArm:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, 58)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DognaRig/LeftArm:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DognaRig/LeftHand:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-47, 87)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("DognaRig/LeftHand:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("DognaRig/PhoneArms/RightArmPhone:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(28, 51)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("DognaRig/PhoneArms/LeftArmPhone:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-25, 50)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("DognaRig/PhoneArms/PhoneHands:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 60)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("DognaRig/Id:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 51.056)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("DognaRig/Id:skew")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PhoneIdle:skew")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_58gk3"]
+resource_name = "phone_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DognaRig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(158, 53), Vector2(210, 53)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Chair:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(159, 97), Vector2(210, 97)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DognaRig/HairBasic:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3, 13), Vector2(-1.3999939, 13), Vector2(3, 13), Vector2(7, 12), Vector2(3, 13)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DognaRig/HairBasic:skew")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292, 0.0, -0.17453292, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DognaRig/Bang:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.49999845, -18), Vector2(0.49999845, -16), Vector2(0.5, -18), Vector2(-1, -16), Vector2(0.5, -18)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DognaRig/Bang:skew")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646, 0.0, -0.17453292, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DognaRig/Bust:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 52), Vector2(-1.3999939, 52), Vector2(0, 52), Vector2(1, 52), Vector2(0, 52)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DognaRig:skew")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646, 0.0, -0.06981317007977318, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DognaRig/LeftHand:rotation")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.6614798]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DognaRig/LeftHand:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-47, 87), Vector2(-7.9999995, 93)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DognaRig/LeftArm:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-38, 58), Vector2(-19, 65)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("DognaRig/LeftArm:rotation")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.6632251]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("DognaRig/Id:position")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 51.056), Vector2(0.049835205, 51.056), Vector2(1, 51.056), Vector2(1.4385071, 51.056), Vector2(1, 51.056)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("DognaRig/Id:skew")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292, 0.0, -0.17453292, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_to7gp"]
+resource_name = "phone_play"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DognaRig/PhoneArms/RightArmPhone:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(28, 51), Vector2(30, 51), Vector2(28, 51), Vector2(25.999996, 51), Vector2(28, 51)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DognaRig/PhoneArms/LeftArmPhone:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-25, 50), Vector2(-22, 50), Vector2(-25, 50), Vector2(-27, 50), Vector2(-25, 50)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DognaRig/PhoneArms/PhoneHands:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(2, 60), Vector2(4, 60), Vector2(2, 60), Vector2(-5.00679e-06, 60), Vector2(2, 60)]
+}
+
+[sub_resource type="Animation" id="Animation_k67gn"]
+resource_name = "vibrate"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PhoneIdle:skew")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 0.08726646, -0.08726646, 0.08726646, -0.08726646, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_to7gp"]
+_data = {
+&"RESET": SubResource("Animation_adb74"),
+&"phone_in": SubResource("Animation_58gk3"),
+&"phone_play": SubResource("Animation_to7gp"),
+&"vibrate": SubResource("Animation_k67gn")
+}
+
+[sub_resource type="Animation" id="Animation_k3g67"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VixenRig:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-112, 115)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VixenRig/Hair:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VixenRig/Bang:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, -73)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VixenRig/Clipboard:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -21)]
+}
+
+[sub_resource type="Animation" id="Animation_4bgka"]
+resource_name = "walk_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VixenRig:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-112, 115), Vector2(-23.35, 120), Vector2(-13.5, 115), Vector2(-3.65, 120), Vector2(6.2, 115), Vector2(16.05, 120), Vector2(25.9, 115), Vector2(35.75, 120), Vector2(45.6, 115), Vector2(55.45, 120), Vector2(65.3, 115), Vector2(85, 115)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VixenRig/Hair:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.017453292, -0.017453292, 0.017453292, -0.017453292, 0.017453292, -0.017453292, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VixenRig/Bang:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(4, -73), Vector2(4, -72), Vector2(4, -73), Vector2(4, -72), Vector2(4, -73), Vector2(4, -72), Vector2(4, -73), Vector2(4, -72), Vector2(4, -73), Vector2(4, -72), Vector2(4, -73), Vector2(4, -72.5), Vector2(4, -73)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VixenRig/Clipboard:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -21), Vector2(-1, -21), Vector2(-1, -22), Vector2(-1, -21), Vector2(-1, -22), Vector2(-1, -22.626951), Vector2(-1, -22), Vector2(-1, -21), Vector2(-1, -22), Vector2(-1, -21), Vector2(-1, -22), Vector2(-1, -21)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_02d50"]
+_data = {
+&"RESET": SubResource("Animation_k3g67"),
+&"walk_in": SubResource("Animation_4bgka")
+}
+
+[node name="MainScene" type="Node2D" unique_id=1229500790]
+script = ExtResource("1_mngbo")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1451817961]
+color = Color(0.3328811, 0.3328805, 0.3328807, 1)
+
+[node name="MainLight" type="PointLight2D" parent="." unique_id=595954217]
+position = Vector2(161.00002, 3.0000114)
+scale = Vector2(2.875, 4.296875)
+color = Color(0.6706895, 0.6706895, 0.6706895, 1)
+energy = 0.7
+texture = ExtResource("10_bcnxi")
+
+[node name="Room" type="Sprite2D" parent="." unique_id=42309738]
+position = Vector2(160, 108)
+texture = ExtResource("1_w2twt")
+metadata/_edit_lock_ = true
+
+[node name="Bed" type="Sprite2D" parent="Room" unique_id=1819934844]
+position = Vector2(133, -67)
+texture = ExtResource("30_pgk25")
+
+[node name="Drawer" type="Sprite2D" parent="Room" unique_id=158817644]
+position = Vector2(45, -78)
+texture = ExtResource("31_kkokr")
+
+[node name="VixenRig" parent="." unique_id=957386412 instance=ExtResource("3_6p3nn")]
+position = Vector2(-112, 115)
+scale = Vector2(1.4, 1.4)
+
+[node name="Chair" type="Sprite2D" parent="." unique_id=21185769]
+position = Vector2(159, 97)
+texture = ExtResource("2_6wevv")
+
+[node name="ChairRoll" type="AudioStreamPlayer2D" parent="Chair" unique_id=1649442647]
+stream = ExtResource("7_l40q6")
+
+[node name="Desk" type="Sprite2D" parent="." unique_id=2008945580]
+texture_filter = 1
+position = Vector2(160.5, 175.75)
+scale = Vector2(1.003125, 1.0054945)
+texture = ExtResource("3_e1cbu")
+metadata/_edit_lock_ = true
+
+[node name="Mug" type="Sprite2D" parent="." unique_id=1328392425]
+position = Vector2(79, 149)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("27_4bgka")
+
+[node name="SteamParticles" type="CPUParticles2D" parent="Mug" unique_id=2053138962]
+position = Vector2(-10, -20)
+amount = 4
+texture = ExtResource("28_02d50")
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 5)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+color_ramp = ExtResource("29_pgk25")
+
+[node name="Manual" type="Sprite2D" parent="." unique_id=1828087544]
+position = Vector2(146, 151)
+texture = ExtResource("4_mngbo")
+
+[node name="ReadingMarker1" type="Marker2D" parent="Manual" unique_id=630246443]
+position = Vector2(25, 0)
+
+[node name="ReadingMarker2" type="Marker2D" parent="Manual" unique_id=332528232]
+position = Vector2(10, 0)
+
+[node name="ReadingMarker3" type="Marker2D" parent="Manual" unique_id=1563736238]
+position = Vector2(-6, 0)
+
+[node name="ReadingMarker4" type="Marker2D" parent="Manual" unique_id=1758251954]
+position = Vector2(-22, 0)
+
+[node name="ReadingMarker5" type="Marker2D" parent="Manual" unique_id=252338017]
+position = Vector2(-32, 0)
+
+[node name="PhoneIdle" type="Sprite2D" parent="." unique_id=1150691502]
+material = SubResource("ShaderMaterial_e1cbu")
+use_parent_material = true
+position = Vector2(212, 153)
+texture = ExtResource("5_4w45t")
+
+[node name="PhoneBacklight" type="PointLight2D" parent="PhoneIdle" unique_id=574804857]
+visible = false
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0.41182494, 2.9802322e-06)
+scale = Vector2(0.16823334, 0.23799057)
+skew = -0.17453292
+energy = 0.5
+shadow_enabled = true
+shadow_filter = 2
+shadow_item_cull_mask = 3
+texture = ExtResource("6_r6p65")
+
+[node name="PhoneShine" type="PointLight2D" parent="PhoneIdle" unique_id=1498434571]
+visible = false
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0.17632599, 0.4999978)
+scale = Vector2(0.22959164, 0.32128733)
+skew = -0.17453292
+energy = 0.5
+shadow_enabled = true
+shadow_filter = 2
+shadow_item_cull_mask = 3
+texture = ExtResource("7_si52b")
+
+[node name="GlitchShader" type="ColorRect" parent="PhoneIdle" unique_id=1443231139]
+visible = false
+material = SubResource("ShaderMaterial_3cpch")
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 20.0
+offset_bottom = 21.0
+
+[node name="DognaRig" parent="." unique_id=376063997 instance=ExtResource("11_e1cbu")]
+position = Vector2(158, 53)
+
+[node name="Id" parent="DognaRig" index="2" unique_id=630881233]
+position = Vector2(1, 51.056)
+
+[node name="LeftArm" parent="DognaRig" index="5" unique_id=687505210]
+position = Vector2(-38, 58)
+
+[node name="LeftHand" parent="DognaRig" index="6" unique_id=1753383447]
+position = Vector2(-47, 87)
+
+[node name="Bang" parent="DognaRig" index="11" unique_id=736287089]
+z_index = 1
+position = Vector2(0.49999845, -18)
+
+[node name="DognaEyeRight" parent="DognaRig/Eyes/OpenNormal/RightEyeOpen/RightEyeFullOpen" parent_id_path=PackedInt32Array(376063997, 1100370011) index="0" unique_id=572032453 node_paths=PackedStringArray("paired_eyes")]
+target_path = NodePath("../../../../../../Manual/ReadingMarker1")
+track_mouse = false
+paired_eyes = [null, null, NodePath("../../../LeftEyeOpen/LeftEyeFullOpen/DognaEyeLeft")]
+
+[node name="DognaEyeLeft" parent="DognaRig/Eyes/OpenNormal/LeftEyeOpen/LeftEyeFullOpen" parent_id_path=PackedInt32Array(376063997, 1497978532) index="0" unique_id=1707975233 node_paths=PackedStringArray("paired_eyes")]
+target_path = NodePath("../../../../../../Manual/ReadingMarker1")
+track_mouse = false
+paired_eyes = [null, null, NodePath("../../../RightEyeOpen/RightEyeFullOpen/DognaEyeRight")]
+
+[node name="DognaEyeRight" parent="DognaRig/Eyes/Bored/RightEyeBored/RightEye" parent_id_path=PackedInt32Array(376063997, 1543954830) index="0" unique_id=528729020 node_paths=PackedStringArray("paired_eyes")]
+target_path = NodePath("../../../../../../Manual/ReadingMarker1")
+paired_eyes = [null, null, null]
+
+[node name="DognaEyeLeft" parent="DognaRig/Eyes/Bored/LeftEyeOpen/LeftEye" parent_id_path=PackedInt32Array(376063997, 154448571) index="0" unique_id=2060149372 node_paths=PackedStringArray("paired_eyes")]
+target_path = NodePath("../../../../../../Manual/ReadingMarker1")
+paired_eyes = [null, null]
+
+[node name="DognaEyeRight" parent="DognaRig/Eyes/Narrow/RightEyeNarrow/RightEye" parent_id_path=PackedInt32Array(376063997, 1112461419) index="0" unique_id=1583631818 node_paths=PackedStringArray("paired_eyes")]
+target_path = NodePath("../../../../../../Manual/ReadingMarker1")
+paired_eyes = [null, null, NodePath("../../../LeftEyeOpen/LeftEye/DognaEyeLeft")]
+
+[node name="DognaEyeLeft" parent="DognaRig/Eyes/Narrow/LeftEyeOpen/LeftEye" parent_id_path=PackedInt32Array(376063997, 1253175319) index="0" unique_id=1201676532 node_paths=PackedStringArray("paired_eyes")]
+target_path = NodePath("../../../../../../Manual/ReadingMarker1")
+paired_eyes = [null, null, NodePath("../../../RightEyeNarrow/RightEye/DognaEyeRight")]
+
+[node name="CatRig" parent="." unique_id=2040195689 instance=ExtResource("13_4w45t")]
+position = Vector2(53, 31)
+
+[node name="EyeIris" parent="CatRig/HeadBack/EyeFront/CatEyeLeft/EyeWhite" parent_id_path=PackedInt32Array(2040195689, 2019709957, 27271281) index="1" unique_id=1064377273]
+position = Vector2(0, 0)
+
+[node name="EyePupil" parent="CatRig/HeadBack/EyeFront/CatEyeLeft/EyeWhite/EyeIris" index="1" unique_id=1103731963]
+position = Vector2(0, 0)
+
+[node name="Audio" type="Node2D" parent="." unique_id=726353894]
+
+[node name="AudioListener2D" type="AudioListener2D" parent="Audio" unique_id=1508738360]
+position = Vector2(158, 66)
+
+[node name="EyesBored" type="AudioStreamPlayer2D" parent="Audio" unique_id=1968086747]
+position = Vector2(159, 66)
+stream = ExtResource("14_r6p65")
+volume_db = 8.0
+
+[node name="Flicker" type="AudioStreamPlayer2D" parent="Audio" unique_id=1915575233]
+position = Vector2(154, -191)
+stream = ExtResource("15_01n6w")
+
+[node name="DoorOpen" type="AudioStreamPlayer2D" parent="Audio" unique_id=921161129]
+position = Vector2(-112, 102)
+stream = ExtResource("17_58gk3")
+
+[node name="DoorClose" type="AudioStreamPlayer2D" parent="Audio" unique_id=425996016]
+position = Vector2(-112, 102)
+stream = ExtResource("18_to7gp")
+volume_db = 8.0
+
+[node name="PhoneDown" type="AudioStreamPlayer2D" parent="Audio" unique_id=1616795568]
+position = Vector2(211, 155)
+stream = ExtResource("19_u0fll")
+
+[node name="PinkNoise" type="AudioStreamPlayer2D" parent="Audio" unique_id=1763799287]
+position = Vector2(212, 154)
+stream = ExtResource("16_6u1mn")
+max_distance = 500.0
+
+[node name="PhoneNotify" type="AudioStreamPlayer2D" parent="Audio" unique_id=1958691183]
+position = Vector2(210, 150)
+stream = ExtResource("17_bcnxi")
+
+[node name="PhoneVibrate" type="AudioStreamPlayer2D" parent="Audio" unique_id=1611800602]
+position = Vector2(210, 150)
+stream = ExtResource("19_xdqt8")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="Audio" unique_id=1897256489]
+stream = ExtResource("28_pgk25")
+
+[node name="Music" type="AudioStreamPlayer" parent="Audio" unique_id=1263226861]
+stream = ExtResource("24_to7gp")
+volume_db = -18.0
+autoplay = true
+
+[node name="BlinkTimer" type="Timer" parent="." unique_id=1406689171]
+wait_time = 2.0
+one_shot = true
+
+[node name="VixenTimer" type="Timer" parent="." unique_id=1201069909]
+wait_time = 3.0
+one_shot = true
+
+[node name="VixenLeaveTimer" type="Timer" parent="." unique_id=133762202]
+one_shot = true
+
+[node name="ReadingEyeChangeTimer" type="Timer" parent="." unique_id=2090758112]
+wait_time = 2.0
+autostart = true
+
+[node name="DoorMarker" type="Marker2D" parent="." unique_id=512357223]
+position = Vector2(-174, 69)
+
+[node name="Clipboard" parent="." unique_id=227651419 instance=ExtResource("30_02d50")]
+
+[node name="ReadingAnimation" type="AnimationPlayer" parent="." unique_id=400789912]
+libraries/ = SubResource("AnimationLibrary_xdqt8")
+autoplay = &"dogna_read"
+speed_scale = 0.8
+
+[node name="FlickerAnimation" type="AnimationPlayer" parent="." unique_id=1164859734]
+libraries/ = SubResource("AnimationLibrary_adb74")
+
+[node name="PhoneAnimation" type="AnimationPlayer" parent="." unique_id=157683383]
+libraries/ = SubResource("AnimationLibrary_to7gp")
+
+[node name="VixenAnimation" type="AnimationPlayer" parent="." unique_id=2074772959]
+libraries/ = SubResource("AnimationLibrary_02d50")
+speed_scale = 0.5
+
+[connection signal="timeout" from="BlinkTimer" to="." method="_on_blink_timer_timeout"]
+[connection signal="timeout" from="VixenTimer" to="." method="_on_vixen_timer_timeout"]
+[connection signal="timeout" from="VixenLeaveTimer" to="." method="_on_vixen_leave_timer_timeout"]
+[connection signal="timeout" from="ReadingEyeChangeTimer" to="." method="_on_reading_eye_change_timer_timeout"]
+[connection signal="animation_finished" from="FlickerAnimation" to="." method="_on_flicker_animation_finished"]
+[connection signal="animation_started" from="FlickerAnimation" to="." method="_on_flicker_animation_started"]
+[connection signal="animation_finished" from="PhoneAnimation" to="." method="_on_phone_animation_finished"]
+[connection signal="animation_finished" from="VixenAnimation" to="." method="_on_vixen_animation_finished"]
+
+[editable path="VixenRig"]
+[editable path="DognaRig"]
+[editable path="CatRig"]
+[editable path="CatRig/HeadBack/EyeFront/CatEyeLeft"]

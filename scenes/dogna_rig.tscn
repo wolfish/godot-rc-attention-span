@@ -1,0 +1,527 @@
+[gd_scene format=3 uid="uid://wb3x5e5mmtiw"]
+
+[ext_resource type="Script" uid="uid://c4nletvedlmh8" path="res://scripts/dogna_rig.gd" id="1_3l0gq"]
+[ext_resource type="Texture2D" uid="uid://bkvola2dm24cj" path="res://sprites/dogna/body/torso.png" id="1_enf2e"]
+[ext_resource type="Texture2D" uid="uid://sihtla4v2yyc" path="res://sprites/dogna/body/face_front.png" id="2_b1ep7"]
+[ext_resource type="Texture2D" uid="uid://vltetaurx38f" path="res://sprites/dogna/body/bust.png" id="2_qa1mc"]
+[ext_resource type="Texture2D" uid="uid://bshrnr0ovp2ug" path="res://sprites/dogna/body/id.png" id="3_b8t5y"]
+[ext_resource type="Texture2D" uid="uid://bq4a60cumhxgc" path="res://sprites/dogna/body/left_arm_table.png" id="3_qa1mc"]
+[ext_resource type="Texture2D" uid="uid://dt5s1o1moh3rc" path="res://sprites/dogna/body/left_hand_table.png" id="4_b8t5y"]
+[ext_resource type="Texture2D" uid="uid://l5ineit35it1" path="res://sprites/dogna/body/jacket.png" id="4_htnhj"]
+[ext_resource type="Texture2D" uid="uid://dxjrme3t3svwj" path="res://sprites/dogna/body/right_arm_table.png" id="5_htnhj"]
+[ext_resource type="Texture2D" uid="uid://dyq2euo5qpf74" path="res://sprites/dogna/body/right_hand_table.png" id="6_k11w3"]
+[ext_resource type="Texture2D" uid="uid://7wwf0hyqldmy" path="res://sprites/dogna/body/hair_basic.png" id="7_d41o4"]
+[ext_resource type="Texture2D" uid="uid://dmcwqswikjdwj" path="res://sprites/dogna/body/left_eye_open.png" id="8_1v5e1"]
+[ext_resource type="PackedScene" uid="uid://g2cf7na80tvv" path="res://scenes/dogna_eye_full.tscn" id="9_xi8do"]
+[ext_resource type="Texture2D" uid="uid://dru8sc341bd2q" path="res://sprites/dogna/body/right_eye_open.png" id="10_ab8vc"]
+[ext_resource type="Texture2D" uid="uid://gh8vmfpoa236" path="res://sprites/phone_hands.png" id="11_e504l"]
+[ext_resource type="Texture2D" uid="uid://hx5sdo1i8cut" path="res://sprites/dogna/body/glasses.png" id="11_gvpvw"]
+[ext_resource type="Texture2D" uid="uid://d2f5ebyravq6v" path="res://sprites/dogna/body/right_arm_phone.png" id="12_dgpd8"]
+[ext_resource type="Texture2D" uid="uid://c357tgxtdxr2x" path="res://sprites/dogna/body/bang.png" id="12_lp7ye"]
+[ext_resource type="Texture2D" uid="uid://cfsodldlk87hy" path="res://sprites/dogna/body/mouth_front_tooth.png" id="13_3l0gq"]
+[ext_resource type="Texture2D" uid="uid://b7pbo1weclk7v" path="res://sprites/dogna/body/left_arm_phone.png" id="13_x56tu"]
+[ext_resource type="Texture2D" uid="uid://dala13eynoly0" path="res://sprites/dogna/eyes/right_bored.png" id="14_htnhj"]
+[ext_resource type="Texture2D" uid="uid://co6qn4tnd5lr3" path="res://sprites/dogna/body/right_hand_phone.png" id="14_j2h4t"]
+[ext_resource type="Texture2D" uid="uid://p8bmgq4o0qq4" path="res://sprites/dogna/body/left_hand_phone.png" id="15_ibg6r"]
+[ext_resource type="Texture2D" uid="uid://brbnm5ufwraul" path="res://sprites/dogna/eyes/left_bored.png" id="15_k11w3"]
+[ext_resource type="Texture2D" uid="uid://dppxd27m3q8j1" path="res://sprites/dogna/eyes/right_closed.png" id="17_ab8vc"]
+[ext_resource type="Texture2D" uid="uid://b0byyjssejbsa" path="res://sprites/dogna/eyes/right_narrow.png" id="17_lp7ye"]
+[ext_resource type="Texture2D" uid="uid://b8qjdrwt747tc" path="res://sprites/dogna/eyes/left_narrow.png" id="18_3l0gq"]
+[ext_resource type="Texture2D" uid="uid://bou5lj0fj7nnn" path="res://sprites/dogna/eyes/left_closed.png" id="18_gvpvw"]
+[ext_resource type="Texture2D" uid="uid://dityt4abwnvj2" path="res://sprites/dogna/eyes/right_happy.png" id="19_lp7ye"]
+[ext_resource type="Texture2D" uid="uid://b4fhxbq2cy0mh" path="res://sprites/dogna/eyes/left_happy.png" id="20_3l0gq"]
+[ext_resource type="AudioStream" uid="uid://cnqbo1x77sme0" path="res://sound/effects/cartoon_blink.ogg" id="26_dbx6s"]
+[ext_resource type="Texture2D" uid="uid://cebvam6j3qnb0" path="res://sprites/dogna/body/mouth_smile.png" id="26_udwjr"]
+[ext_resource type="Texture2D" uid="uid://dh8ydljl0s5hs" path="res://sprites/dogna/body/tounge.png" id="27_pc3uy"]
+[ext_resource type="Texture2D" uid="uid://mklm0wcd36o0" path="res://sprites/dogna/body/mouth_tounge.png" id="28_ey5ll"]
+[ext_resource type="AudioStream" uid="uid://c3lce3lkywl7v" path="res://sound/effects/phone_tap.ogg" id="35_dgpd8"]
+[ext_resource type="AudioStream" uid="uid://c0p8gd1u3leam" path="res://sound/effects/question.ogg" id="36_x56tu"]
+[ext_resource type="AudioStream" uid="uid://c8eyys0ak8w5a" path="res://sound/effects/cartoon_squish.mp3" id="37_j2h4t"]
+[ext_resource type="AudioStream" uid="uid://dn1d3xeq2rnuv" path="res://sound/effects/open_mouth.wav" id="38_ibg6r"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dbx6s"]
+polygon = PackedVector2Array(23, -40, 22, -37, 12, -23, 9, -5, 8, 6, 6, 6, 5, 4, 4, 4, 4, 6, 3, 7, 0, 7, 0, 8, -1, 8, -1, 7, -4, 7, -5, 6, -8, 6, -8, 5, -8, -2, -7, -5, -5, -11, -4, -15, -3, -19, -2, -23, -1, -27, 1, -31, 5, -36, 10, -42, 15, -48)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_o7xgi"]
+polygon = PackedVector2Array(14, -37, 22, -42, 24, -40, 30, -25, 30, -20, 10, 0, 8, 0, 8, 4, 7, 7, 3, 7, 3, 4, 1, 4, 1, 5, 0, 5, 0, 6, -3, 6, -3, 5, -2, 5, -2, 4, -6, 4, -6, 3, -5, 3, -5, 2, -4, 2, -4, 1, -7, 1, -7, 0, -6, 0, -6, -1, -5, -1, -5, -2, -8, -2, -8, -3, -7, -3, -7, -4, -6, -4, -6, -5, -4, -5, -4, -6, -1, -6, -1, -7, 0, -7, 0, -8, 18, -22, 18, -25, 16, -27, 16, -31, 14, -33)
+
+[sub_resource type="Animation" id="Animation_lp7ye"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eyes/OpenNormal:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Eyes/Bored:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Eyes/Narrow:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Eyes/Closed:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_3l0gq"]
+resource_name = "blink"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eyes/OpenNormal:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Eyes/Bored:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Eyes/Narrow:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Eyes/Closed:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dbx6s"]
+_data = {
+&"RESET": SubResource("Animation_lp7ye"),
+&"blink": SubResource("Animation_3l0gq")
+}
+
+[sub_resource type="Animation" id="Animation_ibg6r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tounge:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Eyes/OpenNormal/RightEyeOpen/RightEyeFullOpen/DognaEyeRight:target_path")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("../../../../../EyerollMarkers/EyeRollMarker1")]
+}
+
+[sub_resource type="Animation" id="Animation_clwmj"]
+resource_name = "eyeroll"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eyes/OpenNormal/RightEyeOpen/RightEyeFullOpen/DognaEyeRight:target_path")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [NodePath("../../../../../EyerollMarkers/EyeRollMarker1"), NodePath("../../../../../EyerollMarkers/EyeRollMarker2"), NodePath("../../../../../EyerollMarkers/EyeRollMarker3"), NodePath("../../../../../EyerollMarkers/EyeRollMarker4"), NodePath("../../../../../EyerollMarkers/EyeRollMarker5"), NodePath("../../../../../PhoneMarker")]
+}
+
+[sub_resource type="Animation" id="Animation_wp1lp"]
+resource_name = "tounge_toggle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tounge:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 12), Vector2(0, 17)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_clwmj"]
+_data = {
+&"RESET": SubResource("Animation_ibg6r"),
+&"eyeroll": SubResource("Animation_clwmj"),
+&"tounge_toggle": SubResource("Animation_wp1lp")
+}
+
+[node name="DognaRig" type="Node2D" unique_id=376063997]
+texture_filter = 1
+script = ExtResource("1_3l0gq")
+metadata/_edit_horizontal_guides_ = [-3.0]
+
+[node name="Torso" type="Sprite2D" parent="." unique_id=1713054436]
+position = Vector2(0, 46)
+texture = ExtResource("1_enf2e")
+
+[node name="Bust" type="Sprite2D" parent="." unique_id=699036757]
+position = Vector2(0, 52)
+texture = ExtResource("2_qa1mc")
+
+[node name="Id" type="Sprite2D" parent="." unique_id=630881233]
+position = Vector2(1, 50)
+texture = ExtResource("3_b8t5y")
+
+[node name="Jacket" type="Sprite2D" parent="." unique_id=1325324729]
+position = Vector2(0, 48)
+texture = ExtResource("4_htnhj")
+
+[node name="Face" type="Sprite2D" parent="." unique_id=2130803979]
+texture = ExtResource("2_b1ep7")
+
+[node name="LeftArm" type="Sprite2D" parent="." unique_id=687505210]
+position = Vector2(-41, 58)
+texture = ExtResource("3_qa1mc")
+
+[node name="LeftHand" type="Sprite2D" parent="." unique_id=1753383447]
+position = Vector2(-50, 87)
+texture = ExtResource("4_b8t5y")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="LeftHand" unique_id=1538362408]
+occluder = SubResource("OccluderPolygon2D_dbx6s")
+occluder_light_mask = 2
+
+[node name="RightArm" type="Sprite2D" parent="." unique_id=1893722749]
+position = Vector2(27, 60)
+texture = ExtResource("5_htnhj")
+
+[node name="RightHand" type="Sprite2D" parent="." unique_id=568768741]
+position = Vector2(12, 90)
+texture = ExtResource("6_k11w3")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RightHand" unique_id=60560825]
+occluder = SubResource("OccluderPolygon2D_o7xgi")
+
+[node name="PhoneArms" type="Node2D" parent="." unique_id=131451412]
+visible = false
+
+[node name="PhoneHands" type="Sprite2D" parent="PhoneArms" unique_id=1837047133]
+position = Vector2(2, 60)
+texture = ExtResource("11_e504l")
+
+[node name="RightArmPhone" type="Sprite2D" parent="PhoneArms" unique_id=1651656250]
+position = Vector2(28, 51)
+texture = ExtResource("12_dgpd8")
+
+[node name="RightHandPhone" type="Sprite2D" parent="PhoneArms/RightArmPhone" unique_id=1963640100]
+position = Vector2(-20, 12)
+texture = ExtResource("14_j2h4t")
+
+[node name="LeftArmPhone" type="Sprite2D" parent="PhoneArms" unique_id=1556214834]
+position = Vector2(-25, 50)
+texture = ExtResource("13_x56tu")
+
+[node name="LeftHandPhone" type="Sprite2D" parent="PhoneArms/LeftArmPhone" unique_id=180970642]
+position = Vector2(25, 12)
+texture = ExtResource("15_ibg6r")
+
+[node name="HairBasic" type="Sprite2D" parent="." unique_id=1383010486]
+position = Vector2(3, 13)
+texture = ExtResource("7_d41o4")
+
+[node name="Bang" type="Sprite2D" parent="." unique_id=736287089]
+position = Vector2(-0.25000024, -18)
+scale = Vector2(1.0263158, 1)
+texture = ExtResource("12_lp7ye")
+
+[node name="Eyes" type="Node2D" parent="." unique_id=1400607031]
+
+[node name="OpenNormal" type="Node2D" parent="Eyes" unique_id=1811104739]
+z_index = 1
+
+[node name="RightEyeOpen" type="Sprite2D" parent="Eyes/OpenNormal" unique_id=643066094]
+position = Vector2(15, -5)
+texture = ExtResource("10_ab8vc")
+
+[node name="RightEyeFullOpen" type="Polygon2D" parent="Eyes/OpenNormal/RightEyeOpen" unique_id=1100370011]
+clip_children = 2
+position = Vector2(-9, -8.5)
+texture = ExtResource("10_ab8vc")
+polygon = PackedVector2Array(6.0148, 1.0030196, 8.001437, 0.99549997, 8.001437, 2.0033126, 9.999001, 2.0049376, 9.991188, 3.0049376, 10.99, 2.999125, 10.997812, 3.9913125, 11.99, 3.999125, 11.997499, 4.992125, 13.005312, 4.9999375, 12.999437, 7.0005, 14.00725, 7.0005, 14.000438, 9.002188, 13.000438, 8.994375, 13.010687, 12.010688, 11.987249, 12.010688, 12.001062, 12.995313, 10.99325, 13.003125, 10.99325, 13.995313, 10.008875, 14.003125, 10.000438, 15.000937, 7.9955, 15.001687, 7.9860625, 16.016312, 5.993875, 16.000687, 5.9860625, 15.031938, 3.993875, 15.024125, 3.9860625, 14.016313, 2.97825, 14.016313, 2.987125, 13.001437, 2.00275, 13.00925, 2.0010624, 11.995563, 1.0088749, 12.003375, 1.0006249, 10.970312, 0.016249895, 11.001562, 0.016375065, 6.99575, 1.0007501, 6.9879375, 1.0085626, 5.0104375, 2.00075, 5.002625, 1.99425, 3.986375, 3.0020626, 4.002, 3.0053124, 2.9940624, 4.0053124, 3.001875, 3.9986875, 1.9874375, 6.0065002, 2.0030625)
+uv = PackedVector2Array(6.0148, 1.0030196, 8.001437, 0.99549997, 8.001437, 2.0033126, 9.999001, 2.0049376, 9.991188, 3.0049376, 10.99, 2.999125, 10.997812, 3.9913125, 11.99, 3.999125, 11.997499, 4.992125, 13.005312, 4.9999375, 12.999437, 7.0005, 14.00725, 7.0005, 14.000438, 9.002188, 13.000438, 8.994375, 13.010687, 12.010688, 11.987249, 12.010688, 12.001062, 12.995313, 10.99325, 13.003125, 10.99325, 13.995313, 10.008875, 14.003125, 9.995501, 14.993875, 7.9955, 15.001687, 7.9986877, 16.009438, 6.0065002, 16.009438, 5.9984374, 14.993, 4.0140624, 15.000813, 4.0069375, 13.98925, 3.0069375, 13.997063, 3.008625, 12.973687, 2.0008125, 12.989312, 2.0010624, 11.995563, 1.0088749, 12.003375, 1.0006249, 10.970312, 0.016249895, 11.001562, 0.016375065, 6.99575, 1.0007501, 6.9879375, 1.0085626, 5.0104375, 2.00075, 5.002625, 1.99425, 3.986375, 3.0020626, 4.002, 3.0053124, 2.9940624, 4.0053124, 3.001875, 3.9986875, 1.9874375, 6.0065002, 2.0030625)
+polygons = [PackedInt32Array(43, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42)]
+
+[node name="DognaEyeRight" parent="Eyes/OpenNormal/RightEyeOpen/RightEyeFullOpen" unique_id=572032453 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("9_xi8do")]
+position = Vector2(7, 9.5)
+process_in_editor = true
+target_path = NodePath("../../../../../EyerollMarkers/EyeRollMarker1")
+track_mouse = true
+paired_eyes = [NodePath("../../../LeftEyeOpen/LeftEyeFullOpen/DognaEyeLeft")]
+
+[node name="LeftEyeOpen" type="Sprite2D" parent="Eyes/OpenNormal" unique_id=572228654]
+position = Vector2(-14, -5)
+texture = ExtResource("8_1v5e1")
+
+[node name="LeftEyeFullOpen" type="Polygon2D" parent="Eyes/OpenNormal/LeftEyeOpen" unique_id=1497978532]
+clip_children = 2
+position = Vector2(-9, -8.5)
+texture = ExtResource("8_1v5e1")
+polygon = PackedVector2Array(10.002497, 0.9926273, 11.995836, 1.0096644, 11.995836, 1.9892972, 13.997695, 1.9978156, 14.009134, 2.9964795, 14.988768, 2.9964795, 14.997286, 3.9931493, 15.988841, 4.0048127, 15.988841, 5.0014825, 17.012058, 5.0015893, 16.989872, 7.0062943, 17.99506, 6.997776, 17.994875, 11.022813, 16.998205, 10.988739, 16.989687, 12.010963, 15.984499, 12.002445, 16.00476, 13.009553, 14.991053, 12.992516, 14.999572, 14.014741, 14.011421, 14.006223, 13.999682, 15.012667, 11.980787, 15.0041485, 11.994938, 16.098686, 9.994938, 16.043999, 9.979313, 15.020562, 7.9715, 15.020562, 7.9715, 14.004937, 6.9715, 14.028375, 6.9793124, 13.028375, 6.00275, 13.01275, 5.996049, 11.9657, 5.0069065, 11.996704, 4.997351, 8.995071, 4.0177183, 9.012108, 4.0120516, 6.9989223, 5.0002027, 6.9989223, 5.005497, 4.9969625, 6.0021667, 4.9969625, 6.0021667, 3.9832556, 6.9988365, 4.000293, 7.0113535, 3.0024796, 8.0165415, 2.9939609, 8.0107975, 2.0039985, 10.004137, 2.0039985)
+uv = PackedVector2Array(10.002497, 0.9926273, 11.995836, 1.0096644, 11.995836, 1.9892972, 13.997695, 1.9978156, 14.009134, 2.9964795, 14.988768, 2.9964795, 14.997286, 3.9931493, 15.988841, 4.0048127, 15.988841, 5.0014825, 17.012058, 5.0015893, 16.989872, 7.0062943, 17.99506, 6.997776, 17.994875, 11.022813, 16.998205, 10.988739, 16.989687, 12.010963, 15.984499, 12.002445, 16.00476, 13.009553, 14.991053, 12.992516, 14.999572, 14.014741, 14.011421, 14.006223, 13.999682, 15.012667, 11.980787, 15.0041485, 11.995794, 16.035036, 10.010973, 16.000963, 10.002455, 14.987255, 8.00772, 14.999259, 7.999202, 13.977034, 7.002532, 14.011107, 7.0012374, 13.004963, 6.0045676, 12.987926, 5.996049, 11.9657, 5.0069065, 11.996704, 4.997351, 8.995071, 4.0177183, 9.012108, 4.0120516, 6.9989223, 5.0002027, 6.9989223, 5.005497, 4.9969625, 6.0021667, 4.9969625, 6.0021667, 3.9832556, 6.9988365, 4.000293, 7.0113535, 3.0024796, 8.0165415, 2.9939609, 8.0107975, 2.0039985, 10.004137, 2.0039985)
+
+[node name="DognaEyeLeft" parent="Eyes/OpenNormal/LeftEyeOpen/LeftEyeFullOpen" unique_id=1707975233 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("9_xi8do")]
+position = Vector2(11, 9.5)
+process_in_editor = true
+target_path = NodePath("../../../../../EyerollMarkers/EyeRollMarker1")
+track_mouse = true
+paired_eyes = [NodePath("../../../RightEyeOpen/RightEyeFullOpen/DognaEyeRight")]
+
+[node name="Bored" type="Node2D" parent="Eyes" unique_id=605182732]
+visible = false
+z_index = 1
+
+[node name="RightEyeBored" type="Sprite2D" parent="Eyes/Bored" unique_id=1693521840]
+position = Vector2(15, -5)
+texture = ExtResource("14_htnhj")
+
+[node name="RightEye" type="Polygon2D" parent="Eyes/Bored/RightEyeBored" unique_id=1543954830]
+clip_children = 2
+position = Vector2(-9, -7)
+texture = ExtResource("14_htnhj")
+polygon = PackedVector2Array(2.0078125, 3.979, 12.008312, 3.995875, 11.996125, 4.9866877, 14.003938, 4.9945, 13.997063, 7.997625, 12.997063, 8.005438, 12.996313, 11.028125, 12.004126, 11.0125, 12.013062, 12.019125, 1.9814991, 12.050187, 1.9988749, 11.00625, 0.9910624, 10.990625, 0.9867501, 10.011812, -0.005437374, 10.011812, -0.015750408, 5.9845, 0.9842496, 5.9845, 0.9920621, 4.968875, 1.9920621, 4.9923124)
+uv = PackedVector2Array(2.0078125, 3.979, 12.008312, 3.995875, 11.996125, 4.9866877, 14.003938, 4.9945, 13.997063, 7.997625, 12.997063, 8.005438, 12.996313, 11.028125, 12.004126, 11.0125, 12.0085, 11.990625, 1.9910624, 12.00625, 1.9988749, 11.00625, 0.9910624, 10.990625, 0.9867501, 10.011812, -0.005437374, 10.011812, -0.015750408, 5.9845, 0.9842496, 5.9845, 0.9920621, 4.968875, 1.9920621, 4.9923124)
+
+[node name="DognaEyeRight" parent="Eyes/Bored/RightEyeBored/RightEye" unique_id=528729020 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("9_xi8do")]
+position = Vector2(7, 8)
+process_in_editor = true
+track_mouse = true
+paired_eyes = [NodePath("../../../LeftEyeOpen/LeftEye/DognaEyeLeft")]
+bounds_pupil = Vector2(5, 3)
+
+[node name="LeftEyeOpen" type="Sprite2D" parent="Eyes/Bored" unique_id=345965467]
+position = Vector2(-14, -5)
+texture = ExtResource("15_k11w3")
+
+[node name="LeftEye" type="Polygon2D" parent="Eyes/Bored/LeftEyeOpen" unique_id=154448571]
+clip_children = 2
+position = Vector2(-9, -7)
+texture = ExtResource("15_k11w3")
+polygon = PackedVector2Array(5.993375, 4.96275, 6.0011873, 3.994, 16.010876, 3.9979374, 16.010876, 4.9901247, 17.003063, 4.982312, 17.006, 5.9903126, 18.006, 5.998125, 17.99925, 10.009313, 17.007063, 10.009313, 16.99925, 10.993688, 16.014875, 11.0015, 16.010414, 12.049096, 5.996459, 12.028236, 5.9952497, 11.006812, 4.9952497, 10.999, 5.002375, 8.01175, 4.002375, 8.003938, 3.9969375, 4.960875)
+uv = PackedVector2Array(5.993375, 4.96275, 6.0011873, 3.994, 16.010876, 3.9979374, 16.010876, 4.9901247, 17.003063, 4.982312, 17.006, 5.9903126, 18.006, 5.998125, 17.99925, 10.009313, 17.007063, 10.009313, 16.99925, 10.993688, 16.014875, 11.0015, 16.01725, 12.011937, 6.0030622, 11.999, 5.9952497, 11.006812, 4.9952497, 10.999, 5.002375, 8.01175, 4.002375, 8.003938, 3.9969375, 4.960875)
+
+[node name="DognaEyeLeft" parent="Eyes/Bored/LeftEyeOpen/LeftEye" unique_id=2060149372 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("9_xi8do")]
+position = Vector2(11, 8)
+process_in_editor = true
+track_mouse = true
+paired_eyes = [NodePath("../../../RightEyeBored/RightEye/DognaEyeRight")]
+bounds_pupil = Vector2(5, 3)
+
+[node name="Narrow" type="Node2D" parent="Eyes" unique_id=1944532539]
+visible = false
+z_index = 1
+position = Vector2(0, 2)
+
+[node name="RightEyeNarrow" type="Sprite2D" parent="Eyes/Narrow" unique_id=584728450]
+position = Vector2(15, -5)
+texture = ExtResource("17_lp7ye")
+
+[node name="RightEye" type="Polygon2D" parent="Eyes/Narrow/RightEyeNarrow" unique_id=1112461419]
+clip_children = 2
+position = Vector2(-9, -3)
+texture = ExtResource("17_lp7ye")
+polygon = PackedVector2Array(-0.0038752556, 0.9195, 14.007277, 0.98076653, 14.015542, 3.0135064, 13.023125, 3.013375, 13.027813, 5.036625, -0.013000011, 5.0248127)
+uv = PackedVector2Array(0.008562088, 0.960882, 14.007277, 0.98076653, 14.015542, 3.0135064, 13.023125, 3.013375, 13.027813, 5.036625, -0.013000011, 5.0248127)
+
+[node name="DognaEyeRight" parent="Eyes/Narrow/RightEyeNarrow/RightEye" unique_id=1583631818 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("9_xi8do")]
+position = Vector2(7, 3)
+process_in_editor = true
+track_mouse = true
+paired_eyes = [NodePath("../../../LeftEyeOpen/LeftEye/DognaEyeLeft")]
+bounds_pupil = Vector2(5, 2)
+
+[node name="LeftEyeOpen" type="Sprite2D" parent="Eyes/Narrow" unique_id=1419382114]
+position = Vector2(-14, -5)
+texture = ExtResource("18_3l0gq")
+
+[node name="LeftEye" type="Polygon2D" parent="Eyes/Narrow/LeftEyeOpen" unique_id=1253175319]
+clip_children = 2
+position = Vector2(-9, -3)
+texture = ExtResource("18_3l0gq")
+polygon = PackedVector2Array(3.9775, 0.97159445, 18.032562, 0.9666875, 18.025124, 5.024375, 4.9816875, 5.0339375, 4.974375, 3.0218124, 3.9821875, 3.014)
+uv = PackedVector2Array(3.9775, 0.97159445, 18.032562, 0.9666875, 18.025124, 5.024375, 4.9816875, 5.0339375, 4.974375, 3.0218124, 3.9821875, 3.014)
+
+[node name="DognaEyeLeft" parent="Eyes/Narrow/LeftEyeOpen/LeftEye" unique_id=1201676532 node_paths=PackedStringArray("paired_eyes") instance=ExtResource("9_xi8do")]
+position = Vector2(11, 3)
+process_in_editor = true
+track_mouse = true
+paired_eyes = [NodePath("../../../RightEyeNarrow/RightEye/DognaEyeRight")]
+bounds_pupil = Vector2(5, 2)
+
+[node name="Closed" type="Node2D" parent="Eyes" unique_id=1019026888]
+visible = false
+z_index = 1
+
+[node name="RightEyeClosed" type="Sprite2D" parent="Eyes/Closed" unique_id=1313374221]
+position = Vector2(15, -5)
+texture = ExtResource("17_ab8vc")
+
+[node name="LeftEyeClosed" type="Sprite2D" parent="Eyes/Closed" unique_id=2111469885]
+position = Vector2(-14, -5)
+texture = ExtResource("18_gvpvw")
+
+[node name="ClosedHappy" type="Node2D" parent="Eyes" unique_id=1728065817]
+visible = false
+z_index = 1
+position = Vector2(0, 1)
+
+[node name="RightEyeClosed" type="Sprite2D" parent="Eyes/ClosedHappy" unique_id=723739831]
+position = Vector2(15, -5)
+texture = ExtResource("19_lp7ye")
+
+[node name="LeftEyeClosed" type="Sprite2D" parent="Eyes/ClosedHappy" unique_id=724152435]
+position = Vector2(-14, -5)
+texture = ExtResource("20_3l0gq")
+
+[node name="Glasses" type="Sprite2D" parent="." unique_id=693984720]
+z_index = 2
+texture = ExtResource("11_gvpvw")
+
+[node name="Mouth" type="Sprite2D" parent="." unique_id=533033047]
+position = Vector2(-1, 9)
+texture = ExtResource("13_3l0gq")
+flip_h = true
+
+[node name="MouthSmile" type="Sprite2D" parent="." unique_id=255348587]
+visible = false
+position = Vector2(0, 10)
+texture = ExtResource("26_udwjr")
+
+[node name="Tounge" type="Sprite2D" parent="." unique_id=1248796573]
+visible = false
+position = Vector2(0, 12)
+texture = ExtResource("27_pc3uy")
+
+[node name="MouthTounge" type="Sprite2D" parent="." unique_id=1174620090]
+visible = false
+position = Vector2(-1, 10)
+texture = ExtResource("28_ey5ll")
+
+[node name="BlinkSound" type="AudioStreamPlayer2D" parent="." unique_id=932979708]
+stream = ExtResource("26_dbx6s")
+
+[node name="Tapping" type="AudioStreamPlayer2D" parent="." unique_id=1596344472]
+stream = ExtResource("35_dgpd8")
+volume_db = 8.0
+
+[node name="QuestionSound" type="AudioStreamPlayer2D" parent="." unique_id=1314643713]
+stream = ExtResource("36_x56tu")
+volume_db = 8.0
+
+[node name="SmileSound" type="AudioStreamPlayer2D" parent="." unique_id=1368549201]
+stream = ExtResource("37_j2h4t")
+
+[node name="MouthOpen" type="AudioStreamPlayer2D" parent="." unique_id=880275448]
+position = Vector2(159, 70)
+stream = ExtResource("38_ibg6r")
+
+[node name="EyerollMarkers" type="Node2D" parent="." unique_id=443904333]
+position = Vector2(-161, -62)
+
+[node name="EyeRollMarker1" type="Marker2D" parent="EyerollMarkers" unique_id=513066818]
+position = Vector2(123, 30)
+
+[node name="EyeRollMarker2" type="Marker2D" parent="EyerollMarkers" unique_id=1110223016]
+position = Vector2(138, 17)
+
+[node name="EyeRollMarker3" type="Marker2D" parent="EyerollMarkers" unique_id=696860576]
+position = Vector2(159, 10)
+
+[node name="EyeRollMarker4" type="Marker2D" parent="EyerollMarkers" unique_id=552583596]
+position = Vector2(181, 14)
+
+[node name="EyeRollMarker5" type="Marker2D" parent="EyerollMarkers" unique_id=663337239]
+position = Vector2(195, 30)
+
+[node name="FaceMarker" type="Marker2D" parent="." unique_id=51930826]
+
+[node name="PhoneMarker" type="Marker2D" parent="." unique_id=817140920]
+position = Vector2(2, 52)
+
+[node name="BlinkAnimation" type="AnimationPlayer" parent="." unique_id=1277906656]
+libraries/ = SubResource("AnimationLibrary_dbx6s")
+speed_scale = 3.0
+
+[node name="FaceAnimation" type="AnimationPlayer" parent="." unique_id=1598247348]
+libraries/ = SubResource("AnimationLibrary_clwmj")
+
+[node name="TappingTimer" type="Timer" parent="." unique_id=1028387917]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="animation_finished" from="BlinkAnimation" to="." method="_on_blink_animation_finished"]
+[connection signal="animation_started" from="BlinkAnimation" to="." method="_on_blink_animation_started"]
+[connection signal="animation_finished" from="FaceAnimation" to="." method="_on_face_animation_finished"]
+[connection signal="timeout" from="TappingTimer" to="." method="_on_tapping_timer_timeout"]

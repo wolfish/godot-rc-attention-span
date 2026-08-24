@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dtuqdxqty1cuh"]
+
+[ext_resource type="Script" path="../scripts/rig_eye_2d.gd" id="1_6pssr"]
+
+[node name="RigEye2D" type="Node2D" unique_id=1707975233]
+script = ExtResource("1_6pssr")
+
+[node name="EyeWhite" type="Node2D" parent="." unique_id=27271281]
+
+[node name="EyeWhiteSprite" type="Sprite2D" parent="EyeWhite"]
+
+[node name="EyeIris" type="Node2D" parent="EyeWhite" unique_id=1064377273]
+
+[node name="EyeIrisSprite" type="Sprite2D" parent="EyeWhite/EyeIris"]
+
+[node name="EyePupil" type="Node2D" parent="EyeWhite/EyeIris" unique_id=1103731963]
+
+[node name="EyePupilSprite" type="Sprite2D" parent="EyeWhite/EyeIris/EyePupil"]

@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://bv3qli2b56yu8"]
+
+[ext_resource type="Texture2D" uid="uid://hsuguj00a2ea" path="res://sprites/clip.png" id="1_uay1b"]
+[ext_resource type="Shader" uid="uid://c5mt1m7a0baq7" path="res://shaders/displacement.gdshader" id="2_84lk1"]
+[ext_resource type="Texture2D" uid="uid://dqx3xc46xqcvl" path="res://sprites/clip_logo.png" id="3_72r3v"]
+[ext_resource type="FontFile" uid="uid://drfvqn5lxdmoa" path="res://themes/fonts/Tiny5-Regular.ttf" id="4_i2aqi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g73i8"]
+shader = ExtResource("2_84lk1")
+shader_parameter/interval = 0.5
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 0.5
+shader_parameter/intensityY = 0.5
+shader_parameter/seed = 42.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tvgo0"]
+shader = ExtResource("2_84lk1")
+shader_parameter/interval = 0.5
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 0.1
+shader_parameter/intensityY = 0.2
+shader_parameter/seed = 42.0
+
+[sub_resource type="Animation" id="Animation_uay1b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -120)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ClipboardText:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_84lk1"]
+resource_name = "show"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -120), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ClipboardText:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_72r3v"]
+_data = {
+&"RESET": SubResource("Animation_uay1b"),
+&"show": SubResource("Animation_84lk1")
+}
+
+[node name="Clipboard" type="CanvasLayer" unique_id=227651419]
+offset = Vector2(0, -120)
+transform = Transform2D(1, 0, 0, 1, 0, -120)
+
+[node name="ClipboardSprite" type="Sprite2D" parent="." unique_id=1797469086]
+light_mask = 0
+position = Vector2(65, 56.000004)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_uay1b")
+
+[node name="ClipboardLogo" type="Sprite2D" parent="." unique_id=515005725]
+texture_filter = 1
+material = SubResource("ShaderMaterial_g73i8")
+position = Vector2(42, 27)
+texture = ExtResource("3_72r3v")
+
+[node name="ClipboardRuleLabel" type="RichTextLabel" parent="." unique_id=445038203]
+material = SubResource("ShaderMaterial_tvgo0")
+offset_left = 61.0
+offset_top = 8.0
+offset_right = 101.0
+offset_bottom = 48.0
+theme_override_colors/default_color = Color(0.78039217, 0.75686276, 0.7058824, 1)
+theme_override_fonts/normal_font = ExtResource("4_i2aqi")
+theme_override_font_sizes/normal_font_size = 14
+text = "RULE
+#1024"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClipboardText" type="RichTextLabel" parent="." unique_id=2064090937]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_tvgo0")
+offset_left = 28.0
+offset_top = 44.0
+offset_right = 104.0
+offset_bottom = 108.0
+theme_override_colors/default_color = Color(0.78039217, 0.75686276, 0.7058824, 1)
+theme_override_fonts/normal_font = ExtResource("4_i2aqi")
+theme_override_font_sizes/normal_font_size = 10
+text = "MUTE ALL NOTIFICATIONS DURING 
+WORKING OR STUDYING"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClipboardAnimation" type="AnimationPlayer" parent="." unique_id=1229489750]
+libraries/ = SubResource("AnimationLibrary_72r3v")

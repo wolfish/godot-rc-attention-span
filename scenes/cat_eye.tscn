@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1tkipx1ijs1y"]
+
+[ext_resource type="PackedScene" uid="uid://dtuqdxqty1cuh" path="res://addons/rig_eye_2d/scenes/rig_eye_2d.tscn" id="1_i0rab"]
+[ext_resource type="Texture2D" uid="uid://ct4buds6dlgit" path="res://sprites/cat/iris.png" id="2_70e2c"]
+[ext_resource type="Texture2D" uid="uid://pyfeolgvjle7" path="res://sprites/cat/pupil.png" id="3_jatjr"]
+
+[node name="CatEye" unique_id=1707975233 instance=ExtResource("1_i0rab")]
+texture_filter = 1
+
+[node name="EyeIrisSprite" parent="EyeWhite/EyeIris" parent_id_path=PackedInt32Array(1064377273) index="0"]
+texture = ExtResource("2_70e2c")
+
+[node name="EyePupilSprite" parent="EyeWhite/EyeIris/EyePupil" parent_id_path=PackedInt32Array(1103731963) index="0"]
+texture = ExtResource("3_jatjr")
